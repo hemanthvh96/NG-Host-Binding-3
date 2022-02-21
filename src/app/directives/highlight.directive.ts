@@ -16,4 +16,9 @@ export class HighlightDirective {
     console.log(this.control);
     return this.control.valid ? 'addColor-green addBg-light alignText' : null;
   }
+
+  @HostBinding('style')
+  get addStyle() {
+    return this.control.valid ? { 'border-radius': '10px' } : null;
+  }
 }
